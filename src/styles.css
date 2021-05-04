@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background: #fff;
+}
+
+.header {
+    background-color: #ffffff;
+    /* margin: auto -10px; */
+    padding: 10px 20px;
+    /* box-shadow: 0 0 2px 0 rgb(110, 110, 110);
+    flex-direction: row;
+    display: flex; */
+    align-items: center;
+}
+
+
+form {
+    position: relative;
+    width: 450px;
+    margin: 32px auto 50px auto;
+    background: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 0 1px 7px rgb(128, 128, 128);
+}
+
+form input {
+    width: 100%;
+    /* border-color: red; */
+    padding: 4px 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+form textarea {
+    width: 100%;
+    padding: 4px 10px;
+    font-size: 1rem;
+    resize: none;
+    margin: 2px;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 200, 18);
+    color: #fff;
+    border: none;
+    width: 40%;
+    height: 36px;
+    box-shadow: 0 1px 3px rgb(165, 165, 165);
+    cursor: pointer;
+    outline: none;
+}
+
+
+.note {
+    background: #ffffff;
+    width: 240px;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 16px;
+    float: left;
+    margin-right: 0;
+    border: 0.5px solid #555;
+}
+
+form span {
+    color: red;
+}
+
+form p {
+    padding: 10px 20px;
+}
+
+.note button {
+    position: relative;
+    float: right;
+    color: #f88651;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* @media screen and (max-device-width: 320px) {
+    form {
+        width: 180px!important;
+    }
+}
+
+@media screen and (max-device-width: 480px) {
+    form {
+        width: 300px!important;
+    }
+} */
+
+/* @media screen and (max-device-width: 600px) {
+    form {
+        width: 450px;
+    }
+} */
+
+/* @media only screen and (max-width: 900px) {
+    form {
+        width: 600px;
+    }
+} */
