@@ -1,12 +1,16 @@
 import React from 'react';
-import Header from './Redux-Component/Header';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Redux-Component/Routes';
 
 
 function App() {
   return (
-    <div>
-    <Header/>
-    </div>
+    <Router>
+      <div>
+        <Routes />
+      </div>
+    </Router>
+
   );
 }
 
