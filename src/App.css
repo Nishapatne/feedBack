@@ -20,3 +20,7 @@ Button {
   border-radius: .25rem;
   margin: 2rem;
 }
+
+table{
+  padding: 5px;
+}

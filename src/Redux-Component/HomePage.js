@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Button } from 'react-bootstrap';
 import history from './history';
 
-function Header() {
+function HomePage() {
     return (
         <>
             <Container>
@@ -11,8 +11,8 @@ function Header() {
                 </div>
                 <div className="box_Layout">
                     <div className="buttons">
-                        <Button onClick={() => history.push('/Login')}>Create Profile</Button>
-                        <Button onClick={() => history.push('/Updateprofile')}>Update Profile</Button>
+                        <Button onClick={() => history.push('/Employee_Details')}>Employee List</Button>
+                        <Button onClick={() => history.push('/Create_Profile')}>Create Profile</Button>
                     </div>
 
                 </div>
@@ -22,4 +22,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default HomePage;

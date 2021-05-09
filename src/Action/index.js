@@ -1,13 +1,12 @@
-const ADD_TITLE = 'ADD_TITLE';
-const DELETE_TODO = 'DELETE_TODO';
+const ADD_LIST = 'ADD_LIST';
+// const DELETE_TODO = 'DELETE_TODO';
 
-export const addTodoList = (todoList) => ({
-    type:ADD_TITLE,
-    todoList,
-    id: Date.now()
+export const fetchProductsSuccess = (addList) => ({
+    type:ADD_LIST,
+    addList,
 });
 
-export const deleteTodo = (id) => ({
-    type: DELETE_TODO,
-    id
-});
+// export const deleteTodo = (id) => ({
+//     type: DELETE_TODO,
+//     id
+// });

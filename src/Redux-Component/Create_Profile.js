@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 import history from './history';
 
 
-function Updateprofile() {
+function Create_Profile() {
     return (
         <div>
             <h1>Hello update</h1>
@@ -12,4 +12,4 @@ function Updateprofile() {
     )
 }
 
-export default Updateprofile
+export default Create_Profile;
