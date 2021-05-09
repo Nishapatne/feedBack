@@ -1,91 +1,60 @@
 import React, { useEffect } from 'react'
-import { Button, Container } from 'react-bootstrap'
-import history from './history';
 import { connect } from 'react-redux';
+import history from './history';
 import { fetchProductsSuccess } from '../Action/index';
+import { Button } from 'react-bootstrap';
+
+
 
 function Employee_Details(props) {
-
-  console.log("****************Calling API*********************");
-
   useEffect(() => {
-    console.log("===Calling AP2===");
-    fetch('https://reqres.in/api/users?page=2')
+    fetch('http://dummy.restapiexample.com/api/v1/employees')
       .then(res => res.json())
       .then((result) => {
         props.dispatch(fetchProductsSuccess(result.data));
-      }
-      );
-  })
+      })
+  }, []);
 
-  return (
-    <Container>
-      <h1>Employee Details</h1>
-      <br/>
-      {
-        props.addListArray.length
-          ?
-          <table>
-            <thead>
-              <tr>
-                <th>Sr.No</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>ID</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                props.addListArray.map((dataList, index) => (
-                  <tr key={index}>
-                    <td>{index}</td>
-                    <td>{dataList.first_name}
-                      {dataList.last_name}</td>
-                    <td>{dataList.email}</td>
-                    <td>{dataList.id}</td>
-                  </tr>
-                ))
-              }
-
-            </tbody>
-          </table>
-
-          :
-          null
-      }
+    return (
+      <div>
+        {
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Salary</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              props.employeeList.map((dataList, index) => (
+                <tr key={index}>
+                  <td>{dataList.id}</td>
+                  <td>{dataList.employee_name}</td>
+                  <td>{dataList.employee_salary}</td>
+                  <td>{dataList.employee_age}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        }
       <Button onClick={() => history.push('/')}>Back to Home</Button>
-      {/* //create list of result.data */}
-    </Container>
+      </div>
   )
 }
 
-
 const mapStateToProps = state => ({
-  addListArray: state.LoginReducer.resultJSONArray
+  employeeList: state.LoginReducer.resultArray
 });
 
 export default connect(mapStateToProps)(Employee_Details);
-// export default  (Login);
 
 
-// Phase 2
-      //update this result in store result.data
-      // how?
-      // - create a new json array in store and name it result.data
-      // - dispatch result.data to store and update result.data in result.data
+// 'http://dummy.restapiexample.com/api/v1/employees'
 
-      // {
-      //   props.addListArray.length
-      //     ?
-      //     props.addListArray.map((dataList,index) => (
-      //       <ul key={index}>
-      //         <p>{dataList.id}</p>
-      //       </ul>
-      //     ))
-      //     :
-      //     null
-      //  }
+//  'https://reqres.in/api/users?page=2'
 
-      // 'http://dummy.restapiexample.com/api/v1/employees'
 
-      // {props.addListArray.length ? props.addListArray[1].employee_name : "I AM empty"}

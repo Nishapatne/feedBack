@@ -24,3 +24,7 @@ Button {
 table{
   padding: 5px;
 }
+
+th{
+  margin-right: 3px;
+}
