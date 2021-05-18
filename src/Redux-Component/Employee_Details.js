@@ -4,14 +4,14 @@ import history from './history';
 import { fetchProductsSuccess } from '../Action/index';
 import { Button } from 'react-bootstrap';
 
-
-
 function Employee_Details(props) {
   useEffect(() => {
-    fetch('http://dummy.restapiexample.com/api/v1/employees')
-      .then(res => res.json())
+    fetch('http://localhost:5001/employee-eddb0/us-central1/app/api/read')
+      .then(
+        res => res.json())
       .then((result) => {
-        props.dispatch(fetchProductsSuccess(result.data));
+        console.log("test");
+        props.dispatch(fetchProductsSuccess(result));
       })
   }, []);
 
@@ -41,7 +41,7 @@ function Employee_Details(props) {
           </tbody>
         </table>
         }
-      <Button onClick={() => history.push('/')}>Back to Home</Button>
+      <Button className="buttons" onClick={() => history.push('/')}>Back to Home</Button>
       </div>
   )
 }
@@ -58,3 +58,14 @@ export default connect(mapStateToProps)(Employee_Details);
 //  'https://reqres.in/api/users?page=2'
 
 
+// 'https://dummy.restapiexample.com/api/v1/employees'
+
+// function Employee_Details() {
+//   return (
+//     <div>
+//       <h1>Hello employee</h1>
+//     </div>
+//   )
+// }
+
+// export default Employee_Details

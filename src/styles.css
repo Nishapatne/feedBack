@@ -1,4 +1,4 @@
-.logo{
+.emloyee_logo{
     text-align: center;
     margin-bottom: 10px;    
 }
@@ -10,78 +10,12 @@
 }
 
 .buttons{
-    width: 400px;
-    margin: auto;
+    margin: 10px;
+    background-color: #6c757d!important;
+    border-color: #6c757d!important;
 }
 
-form {
-    position: relative;
-    width: 450px;
-    margin: 32px auto 50px auto;
-    background: #fff;
-    padding: 7px;
-    border-radius: 7px;
-    box-shadow: 0 1px 7px rgb(128, 128, 128);
-}
-
-form input {
-    width: 100%;
-    /* border-color: red; */
-    padding: 4px 10px;
-    margin-bottom: 20px;
-    outline: none;
-    font-size: 1rem;
-    resize: none;
-}
-
-form button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(255, 200, 18);
-    color: #fff;
-    border: none;
-    width: 40%;
-    height: 36px;
-    box-shadow: 0 1px 3px rgb(165, 165, 165);
-    cursor: pointer;
-    outline: none;
-}
-
-form span {
-    color: red;
-}
-
-form p {
-    padding: 10px 20px;
-}
-
-/* @media screen and (max-device-width: 320px) {
-    form {
-        width: 180px!important;
-    }
-}
-
-@media screen and (max-device-width: 480px) {
-    form {
-        width: 300px!important;
-    }
+/* .logo{
+    background-image: url(./Arrow-Logo-retina-min.jpg);
 } */
 
-/* @media screen and (max-device-width: 600px) {
-    form {
-        width: 450px;
-    }
-} */
-
-/* @media only screen and (max-width: 900px) {
-    form {
-        width: 600px;
-    }
-} */
-
-/* @media (max-height: 700px){
-    .container {
-        top: 10%;
-    }
-} */

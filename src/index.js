@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.css';
-import './App.css';
 import './styles.css';
 import App from './App';
 import store from './Store/index';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 
 ReactDOM.render(
